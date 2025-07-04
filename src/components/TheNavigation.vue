@@ -1,12 +1,21 @@
 <template>
   <nav id="nav">
-    <router-link to="/">Home </router-link>
-    <router-link to="brazil">Brazil </router-link>
-    <router-link to="hawaii">Hawaii </router-link>
-    <router-link to="jamaica">Jamaica </router-link>
-    <router-link to="panama">Panama </router-link>
+    <router-link to="/">Home</router-link>
+    <router-link v-for="destination in destinations" :key="destination.id" :to="{
+      name: 'destination.show', params: {
+        id: destination.id
+      }
+    }">
+      {{ destination.name }}
+    </router-link>
   </nav>
 </template>
+<script setup>
+import data from "@/data.json"
+import { ref } from "vue";
+
+const destinations = ref(data.destinations)
+</script>
 <style scoped>
 #nav .activeLink {
   color: lightblue;
