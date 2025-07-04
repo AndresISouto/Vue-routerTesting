@@ -1,5 +1,17 @@
 <template>
-  <div>
-    <h1>Home</h1>
+  <div class="home">
+    <h1>All destinations</h1>
+    <section class="destinations">
+      <router-link v-for="destination in destinations" :key="destination.id" :to="destination.slug">
+        <h2>{{ destination.name }}</h2>
+        <img :src="`/images/${destination.image}`" alt="imagen">
+      </router-link>
+    </section>
   </div>
 </template>
+<script setup>
+import sourceData from "@/data.json"
+import { ref } from "vue";
+
+const destinations = ref(sourceData.destinations)
+</script>
