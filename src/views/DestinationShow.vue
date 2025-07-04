@@ -29,14 +29,15 @@ async function fetchDestination() {
 
 onMounted(() => {
   fetchDestination()
-  watch(
-    () => route.params.id || route.params.slug,
-    () => {
-      destination.value = null // Optional: Clear previous data while loading
-      fetchDestination()
-    },
-    // { immediate: false } // Already fetched on mount
-  )
+  // esto esta guay si hay problemas de rendimiento o si se tarda en cambiar entre paginas
+  // watch(
+  //   () => route.params.id || route.params.slug,
+  //   () => {
+  //     destination.value = null // Optional: Clear previous data while loading
+  //     fetchDestination()
+  //   },
+  //   // { immediate: false } // Already fetched on mount
+  // )
 
 })
 </script>
