@@ -10,4 +10,13 @@ export default defineConfig({
     },
   },
   plugins: [vue()],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://travel-dummy-api.netlify.app',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, ''),
+      },
+    },
+  },
 })

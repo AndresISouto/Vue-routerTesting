@@ -4,7 +4,8 @@
     <section class="destinations">
       <router-link v-for="destination in destinations" :key="destination.id" :to="{
         name: 'destination.show', params: {
-          id: destination.id
+          id: destination.id,
+          slug: destination.slug
         }
       }">
         <h2>{{ destination.name }}</h2>
