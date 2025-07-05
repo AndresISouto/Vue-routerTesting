@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h1>Welcome to{{ experience.name }} </h1>
+    <h1>Welcome to {{ experience.name }} </h1>
     <img :src="`/images/${experience.image}`" alt="imagen">
     <p>{{ experience.description }}</p>
   </section>

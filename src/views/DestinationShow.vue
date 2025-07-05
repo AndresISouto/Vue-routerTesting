@@ -12,10 +12,10 @@
       <div class="cards">
         <router-link v-for="experience in destination.experiences" :key="experience.slug"
           :to="{ name: 'Experience.show', params: { experienceSlug: experience.slug, } }">
-          <ExperienceCard :experience="experience">
-          </ExperienceCard>
+          <ExperienceCard :experience="experience"> </ExperienceCard>
         </router-link>
       </div>
+      <router-view></router-view>
     </section>
   </div>
 </template>
