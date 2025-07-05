@@ -13,6 +13,13 @@ const props = defineProps({
     required: true
   }
 })
-console.log(props.experience.slug)
 </script>
-<style scoped></style>
+
+<style scoped>
+.card img {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  /* ensures image fills the space without distortion */
+}
+</style>
