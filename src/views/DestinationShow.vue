@@ -60,4 +60,8 @@ const destination = computed(() => {
 //
 // })
 </script>
-<style scoped></style>
+<style scoped>
+h1 {
+  padding: 2rem;
+}
+</style>

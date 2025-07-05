@@ -1,9 +1,12 @@
 <template>
   <span class="go-back">
-    <button @click="route.back()">go back</button>
+    <button @click="goBack">go back</button>
   </span>
 </template>
 <script setup>
-import { useRoute } from 'vue-router'
-const route = useRoute()
+import { useRouter } from 'vue-router'
+const route = useRouter()
+function goBack() {
+  route.go(-1)
+}
 </script>
