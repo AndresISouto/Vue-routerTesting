@@ -6,6 +6,11 @@ import Home from "@/views/Home.vue"
 const routes = [
   { path: '/', name: "Home", component: Home },
   {
+    path: '/:pathMatch(.*)*',
+    name: "notFound",
+    component: () => import('@/views/NotFound.vue')
+  },
+  {
     path: '/destination/:id/:slug',
     name: "destination.show",
     component: () => import(`@/views/DestinationShow.vue`),
@@ -20,7 +25,8 @@ const routes = [
         component: () => import(`@/views/ExperienceShow.vue`),
         props: route => ({
           ...route.params,
-          id: parseInt(route.params.id)
+          id: parseInt(route.params.id),
+          meta: { disableTransition: true }
         })
       }
 

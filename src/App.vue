@@ -7,8 +7,20 @@ const route = useRoute()
 <template>
   <TheNavigation />
   <div class="container">
-    <router-view :key="route.path"></router-view>
+    <transition>
+      <router-view :key="route.path"></router-view>
+    </transition>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.1s;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
