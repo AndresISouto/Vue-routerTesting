@@ -17,6 +17,7 @@
       </div>
       <router-view></router-view>
     </section>
+    <GoBack></GoBack>
   </div>
 </template>
 <script setup>
@@ -24,6 +25,7 @@ import { useRoute } from 'vue-router'
 import { watch, computed, onMounted, ref } from 'vue';
 import sourceData from "@/data.json"
 import ExperienceCard from '@/components/ExperienceCard.vue';
+import GoBack from '@/components/GoBack.vue';
 
 const props = defineProps({
   id: {
