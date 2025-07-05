@@ -1,5 +1,7 @@
-# Vue 3 + Vite
+Más o menos ya estaria el curso/tutorial de vue-router.
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Falta el bonus y algunas cosillas sobre los paramtros meta y las querys pero prefiero ver eso cuando ya sepa algo de back.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+Por ahora yo creo que voy bien y fue un buen primer acercamiento al routing
+
+
